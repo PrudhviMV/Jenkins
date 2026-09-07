@@ -31,7 +31,7 @@ pipeline{
                     echo '$Learn'
                     #env
                     #sleep 11
-                    echo "GitHub Webhook testing"
+                    echo "GitHub Webhook testing automatic"
                     echo "Hello ${params.PERSON}"
                     echo "Biography: ${params.BIOGRAPHY}"
                     echo "Toggle: ${params.DEPLOY}"
