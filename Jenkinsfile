@@ -6,7 +6,7 @@ pipeline{
     }
     
     environment{
-        Learn = Jenkins
+        Learn = "Jenkins"
     }
 
     stages{
