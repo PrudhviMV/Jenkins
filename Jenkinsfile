@@ -47,4 +47,19 @@ pipeline{
             }
         }
     }
+
+    post{
+        always{
+            echo 'T will run always'
+            cleanWs()
+        }
+
+        success{
+            echo 'I will run if it is success'
+        }
+
+        failure{
+            echo 'I will run if it is failure'
+        }
+    }
 }
