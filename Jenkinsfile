@@ -44,13 +44,14 @@ pipeline{
         stage('Deploy'){
             steps{
                 echo 'Deplying'
+                Test
             }
         }
     }
 
     post{
         always{
-            echo 'T will run always'
+            echo 'I will run always'
             cleanWs()
         }
 
