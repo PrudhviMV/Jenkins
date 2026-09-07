@@ -1,3 +1,25 @@
+// pipeline {
+//     agent any
+
+//     stages {
+//         stage('Build') {
+//             steps {
+//                 echo 'Building..'
+//             }
+//         }
+//         stage('Test') {
+//             steps {
+//                 echo 'Testing..'
+//             }
+//         }
+//         stage('Deploy') {
+//             steps {
+//                 echo 'Deploying....'
+//             }
+//         }
+//     }
+// }
+
 pipeline{
     agent{
         node {
@@ -8,32 +30,20 @@ pipeline{
     stages{
         stage('Build'){
             steps{
-                script{
-                    sh """
-                    echo 'Building'
-                    """
-                }
+                echo 'Building'
             }
         }
     
 
         stage('Test'){
             steps{
-                script{
-                    sh """
-                    echo 'Testing'
-                    """
-                }
+                echo 'Testing'
             }
         }
 
         stage('Deploy'){
             steps{
-                script{
-                    sh """
-                    echo 'Deploying'
-                    """
-                }
+                echo 'Deplying'
             }
         }
     }
