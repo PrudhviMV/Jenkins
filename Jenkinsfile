@@ -5,12 +5,17 @@ pipeline{
         }
     }
     
+    environment{
+        Learn = Jenkins
+    }
+
     stages{
         stage('Build'){
             steps{
                 script{
                     sh """
                     echo 'Building'
+                    echo '$Learn'
                     """
                 }
             }
@@ -20,8 +25,9 @@ pipeline{
         stage('Test'){
             steps{
                 script{
-                    sh """"
+                    sh """
                     echo 'Testing'
+                    echo '$Learn'
                     """
                 }
             }
@@ -32,6 +38,7 @@ pipeline{
                 script{
                     sh """
                     echo 'Deploying'
+                    echo '$Learn'
                     """
                 }
             }
